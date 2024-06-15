@@ -1,2 +1,4 @@
 # cal
-calendar for printing
+
+`./cal.sh [year]`
+
