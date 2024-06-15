@@ -21,6 +21,7 @@ fi
 echo '<pre><code>' > ${output_html}
 gcal --starting-day=1 ${year} | \
     sed -e 's/^/      /g' \
+        -e 's/[<>]/ /g' \
         -e 's/Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su/ 一 二 三  四 五  六 天      一 二 三  四 五  六 天      一 二 三  四 五  六 天/' \
         -e 's/            January                   February                   March/        一月                      二月                      三月/g' \
         -e 's/            April                      May                       June/       四月                      五月                      六月/g' \
